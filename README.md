@@ -9,35 +9,30 @@ Domain: Cloud Computing
 
 Duration: Augest to september 2024
 
-Overview of the Project:
+Deploying a Serverless Web Application
 
-In this project, you developed a serverless web application by leveraging AWS services like Lambda, S3, and DynamoDB. The primary goal was to create a scalable, cost-efficient, and highly available application without managing any server infrastructure.
+Overview of the Project: The goal of this project was to deploy a serverless web application that showcases a simple greeting webpage. The webpage includes a dynamic feature that displays the number of views the site has received, with the count updating automatically.
 
-Components:
+Key Components:
+
 1.AWS Lambda:
-*Used for executing backend logic without the need for managing servers.
-*Functions were triggered by HTTP requests (through API Gateway) or events in S3/DynamoDB.
-*Handled tasks such as processing user input, interacting with the database, and returning responses to the client.
+Functionality: AWS Lambda is the core of your serverless architecture. It handles backend logic without the need for server management. In this project, Lambda functions were used to interact with DynamoDB and retrieve/update the view count each time the webpage is loaded.
 
 2.Amazon S3:
-Acted as the storage layer for static assets (HTML, CSS, JavaScript files, images, etc.).
-Configured as a static website to host the front-end of your application.
-S3’s built-in versioning and lifecycle policies ensured data durability and cost optimization
+Functionality: Amazon S3 (Simple Storage Service) was used to host the static assets of your web application, such as HTML, CSS, and JavaScript files. S3 provides a reliable and scalable way to serve static content to users with low latency.
 
 3.Amazon DynamoDB:
-A NoSQL database service used to store application data.
-Offered seamless scalability, high availability, and low-latency performance.
-DynamoDB tables were designed with the appropriate partition keys and indexes for efficient querying.
+Functionality: DynamoDB is a NoSQL database service that was utilized to store the view count data. The database is highly scalable and managed, making it ideal for serverless applications. Each time the page is accessed, the view count is retrieved from and updated in DynamoDB via the Lambda function.
 
-4.Architecture Workflow:
-Frontend (S3): Users interact with the static web pages hosted on S3. The frontend sends HTTP requests to the backend via the API Gateway.
-Backend (Lambda): API Gateway routes requests to the appropriate Lambda functions, which execute the business logic.
-Database (DynamoDB): Lambda functions interact with DynamoDB to perform CRUD (Create, Read, Update, Delete) operations on the application data.
-Security: Implemented security best practices using IAM roles, API Gateway authorizers, and data encryption.
+4.Front-End:
+Functionality: The front-end of the application consists of a simple greeting webpage that displays a welcoming message to the user. Additionally, it dynamically shows the number of views the page has received, which is retrieved from DynamoDB. The count is updated in real-time as users visit the page.
 
-Benefits:
-*Scalability: Automatically scales with demand without manual intervention.
-*Cost Efficiency: Pay only for the compute time used (Lambda) and the storage consumed (S3 and DynamoDB).
-*Reduced Complexity: No need to manage server infrastructure, resulting in faster development and deployment.
-This overview captures the essence of your project and highlights the key components and benefits of using a serverless architecture.
+5.Architecture:
+The application follows a serverless architecture, where the front-end is hosted on S3, and the backend is handled by AWS Lambda and DynamoDB. This architecture eliminates the need for managing servers, reduces costs, and scales automatically based on the number of requests.
+
+6.Deployment Process:
+The deployment involved setting up an S3 bucket for hosting the static website, creating a DynamoDB table for storing the view counts, writing a Lambda function to handle the logic of retrieving and updating the view count, and connecting these components using API Gateway or other suitable methods.
+
+7.Outcome:
+The final product is a scalable, cost-efficient serverless web application that displays a dynamic greeting page with a live view counter. This project demonstrates the integration of various AWS services to create a fully functional and responsive serverless application.
 
