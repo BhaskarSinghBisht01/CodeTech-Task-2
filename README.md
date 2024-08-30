@@ -36,3 +36,7 @@ The deployment involved setting up an S3 bucket for hosting the static website, 
 7.Outcome:
 The final product is a scalable, cost-efficient serverless web application that displays a dynamic greeting page with a live view counter. This project demonstrates the integration of various AWS services to create a fully functional and responsive serverless application.
 
+#OUTPUT
+
+![Screenshot (172)](https://github.com/user-attachments/assets/c31469eb-91d7-4b85-b27a-1f7ce47be536)
+
