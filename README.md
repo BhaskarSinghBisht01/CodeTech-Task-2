@@ -9,6 +9,9 @@ Domain: Cloud Computing
 
 Duration: Augest to september 2024
 
+Mentor: Muzammil ahmed
+
+
 Deploying a Serverless Web Application
 
 Overview of the Project: The goal of this project was to deploy a serverless web application that showcases a simple greeting webpage. The webpage includes a dynamic feature that displays the number of views the site has received, with the count updating automatically.
